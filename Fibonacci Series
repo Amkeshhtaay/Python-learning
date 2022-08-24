@@ -1,0 +1,17 @@
+import logging
+logging.basicConfig(filename='FibSer1.log',level=logging.DEBUG,format='%(name)s %(asctime)s %(levelname)s %(message)s')
+
+#Program to generate Fibonacci series with as many terms as you want :
+
+num1,num2,temp = 1,1,0
+try:
+    count = int(input("Enter the number of values required except for first two numbers : "))
+    if num1 == 1:
+        print(num1,num2, end=' ')
+    for i in range(count):
+        temp= num1+ num2
+        num1 = num2
+        num2= temp
+        print(temp, end=' ')
+except ValueError as e:
+        print('Invalid integer value')

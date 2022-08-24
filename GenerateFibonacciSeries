@@ -1,0 +1,19 @@
+import logging
+logging.basicConfig(filename='GenFibSer.log',level=logging.DEBUG,format='%(name)s %(asctime)s %(levelname)s %(message)s')
+
+#This is a program to generate your own Fibonacci series :
+
+try:
+    a = int(input("Enter first number : "))
+    b = int(input("Enter second number : "))
+    logging.INFO = print("The 2 numbers entered by user are %s and %s",a,b)
+    count = int(input("Enter number of terms required in the series except for first 2 number : "))
+    temp = 0
+    print(a,b,end=' ')
+    for i in range(count) :
+        temp = a + b
+        a = b
+        b = temp
+        print(temp,end=' ')
+except ValueError:
+    print("Invalid integer value")

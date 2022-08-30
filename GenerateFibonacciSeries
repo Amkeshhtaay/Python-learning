@@ -6,8 +6,8 @@ logging.basicConfig(filename='GenFibSer.log',level=logging.DEBUG,format='%(name)
 try:
     a = int(input("Enter first number : "))
     b = int(input("Enter second number : "))
-    logging.INFO = print("The 2 numbers entered by user are %s and %s",a,b)
     count = int(input("Enter number of terms required in the series except for first 2 number : "))
+    logging.info("The 2 numbers entered by user are %s and %s and number of terms required are %s", a, b, count)
     temp = 0
     print(a,b,end=' ')
     for i in range(count) :

@@ -6,6 +6,7 @@ logging.basicConfig(filename='FibSer1.log',level=logging.DEBUG,format='%(name)s 
 num1,num2,temp = 1,1,0
 try:
     count = int(input("Enter the number of values required except for first two numbers : "))
+    logging.info("The number of values required by user is %s",count)
     if num1 == 1:
         print(num1,num2, end=' ')
     for i in range(count):
